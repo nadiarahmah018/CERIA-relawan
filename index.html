@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CERIA Relawan</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <nav class="site-nav">
             <div class="container nav-inner">
-                <a class="brand" href="#">CERIA</a>
+                <a class="brand" href="#tentang">CERIA</a>
                 <ul class="nav-list">
                     <li><a href="#tentang">Tentang</a></li>
                     <li><a href="#aktivitas">Aktivitas</a></li>
@@ -25,7 +26,7 @@
                 <div class="container">
                     <h1 class="hero-title">CERIA</h1>
                     <p class="hero-subtitle">Ciptakan Energi Relawan, Inspirasi, dan Aksi</p>
-                    <a class="btn btn-primary" href="#daftar">Daftar Sekarang</a>
+                    <a id="login-btn" class="btn btn-primary" href="#">Login</a>
                 </div>
             </div>
         </div>
@@ -164,9 +165,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="aktivitas">Pilih Kegiatan</label>
+                    <label for="aktivitas">Pilih Aktivitas</label>
                     <select id="aktivitas" name="aktivitas" required>
-                        <option value="">-- Pilih Kegiatan --</option>
+                        <option value="">-- Pilih Aktivitas --</option>
                         <option value="donor">Donor Darah</option>
                         <option value="bakti">Bakti Sosial</option>
                         <option value="edukasi">Edukasi Anak</option>

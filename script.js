@@ -44,13 +44,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// event click pada tombol login
-const loginBtn = document.getElementById("login-btn");
-
-loginBtn.addEventListener("click", (e) => {
-  e.preventDefault(); // 
-  alert("🔒 Fitur login masih dalam proses pengembangan. Tunggu update berikutnya!");
-});
 
 
 

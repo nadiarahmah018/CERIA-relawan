@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,22 +14,28 @@
     <header class="site-header">
         <nav class="site-nav">
             <div class="container nav-inner">
-                <a class="brand" href="#tentang">CERIA</a>
+                <a class="brand" href="index.php">CERIA</a>
                 <ul class="nav-list">
                     <li><a href="#tentang">Tentang</a></li>
                     <li><a href="#aktivitas">Aktivitas</a></li>
                     <li><a href="#daftar">Daftar</a></li>
                     <li><a href="#kontak">Kontak</a></li>
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <li><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                    <?php else: ?>
+                        <li><a href="login.php">Login</a></li>
+                    <?php endif; ?>
                 </ul>
             </div>
         </nav>
+
         <div class="hero">
             <img class="hero-img" src="ceria.jpg" alt="Selamat Datang di CERIA" />
             <div class="hero-overlay">
                 <div class="container">
                     <h1 class="hero-title">CERIA</h1>
                     <p class="hero-subtitle">Ciptakan Energi Relawan, Inspirasi, dan Aksi</p>
-                    <a id="login-btn" class="btn btn-primary" href="#">Login</a>
                 </div>
             </div>
         </div>
@@ -49,8 +58,7 @@
                             <a href="#aktivitas" class="btn btn-accent btn-outline">Lihat Aktivitas</a>
                         </div>
                     </div>
-                    <div class="hero-media">
-                    </div>
+                    <div class="hero-media"></div>
                 </div>
             </div>
         </section>
@@ -76,7 +84,7 @@
                     <p>
                         Lokasi: PMI Samarinda, Jl. Ir. H. Juanda No.5<br />
                         Waktu: 10 Oktober 2025, 09:00 - 13:00<br />
-                        Kouta: 50 relawan<br />
+                        Kuota: 50 relawan<br />
                         Status: Dibuka
                     </p>
                 </article>
@@ -87,7 +95,7 @@
                     <p>
                         Lokasi: Kampung Loa Janan Ilir, Samarinda<br />
                         Waktu: 15 Oktober 2025, 08:00 - 16:00<br />
-                        Kouta: 25 Relawan<br />
+                        Kuota: 25 Relawan<br />
                         Status: Dibuka
                     </p>
                 </article>
@@ -98,7 +106,7 @@
                     <p>
                         Lokasi: SDN 010 Samarinda Ulu <br />
                         Waktu: 20 Oktober 2025, 07:30 - 12:00<br />
-                        Kouta: 20 relawan<br />
+                        Kuota: 20 relawan<br />
                         Status: Dibuka
                     </p>
                 </article>
@@ -109,7 +117,7 @@
                     <p>
                         Lokasi: Taman Samarendah, Samarinda <br />
                         Waktu: 25 Oktober 2025, 08:00 - 11:00<br />
-                        Kouta: 45 Relawan<br />
+                        Kuota: 45 Relawan<br />
                         Status: Dibuka
                     </p>
                 </article>
@@ -120,7 +128,7 @@
                     <p>
                         Lokasi: Stadion Segiri, Samarinda<br />
                         Waktu: 30 Oktober 2025, 15:00 - 21:00<br />
-                        Kouta: 27 Relawan<br />
+                        Kuota: 27 Relawan<br />
                         Status: Dibuka
                     </p>
                 </article>
